@@ -11,15 +11,15 @@
         <h3>{{pokemon.name.toUpperCase()}}</h3>
       </div>
       <div class="properties">
-        <div class="right">{{pokemon.base_experience}}</div>
+        <div class="right">{{pokemon.base_experience}} XP</div>
         <div class="left">Base Experience</div>
       </div>
       <div class="properties">
-        <div class="right">{{pokemon.height}}</div>
+        <div class="right">{{pokemon.height / 10}} m</div>
         <div class="left">Height</div>
       </div>
       <div class="properties">
-        <div class="right">{{pokemon.weight}}</div>
+        <div class="right">{{pokemon.weight / 10}} kg</div>
         <div class="left">Weight</div>
       </div>
       <div class="spacing"></div>
@@ -91,21 +91,20 @@ export default {
     },
     fetchDetail() {
       const name = this.$route.params.name;
-      const detailURL = this.baseURL + name;
-      const url = {
-        baseURL: this.baseURL,
-        detailURL: detailURL
-      }
-      this.$store.dispatch('fetchDetail', url)
+      this.$store.dispatch('fetchDetail', name)
     },
   },
   created () {
     this.fetchDetail()
   },
+  watch: {
+    '$route' () {
+      this.fetchDetail()
+    }
+  },
   computed: {
     ...mapState(
       [
-        'baseURL',
         'pokemon',
         'loading',
       ]

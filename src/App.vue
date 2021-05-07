@@ -14,6 +14,9 @@ export default {
   components: {
     Home,
     Navbar
+  },
+  created () {
+    document.title = "Pokedex";
   }
 }
 </script>

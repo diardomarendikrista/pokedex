@@ -1,7 +1,7 @@
 <template>
   <center>
-    <div @click="goToHome()" class="title-background">
-      <p class="title">Pokédex</p>
+    <div @click="goToHome()" class="navbar-title-background">
+      <p class="navbar-title">Pokédex</p>
     </div>
   </center>
 </template>
@@ -19,7 +19,7 @@ export default {
 </script>
 
 <style>
-.title-background {
+.navbar-title-background {
   background-image: url('../assets/images/title.png');
   background-repeat: no-repeat;
   background-position: center;
@@ -32,11 +32,11 @@ export default {
   align-content: center;
 }
 
-.title-background:hover {
+.navbar-title-background:hover {
   cursor: pointer;
 }
 
-.title {
+.navbar-title {
   align-self: center;
   text-align: center;
   font-size: 35px;
@@ -45,7 +45,7 @@ export default {
 }
 
 @media only screen and (max-width: 768px) {
-  .title-background {
+  .navbar-title-background {
     background-image: url('../assets/images/title2.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -56,7 +56,7 @@ export default {
     vertical-align: middle;
     align-content: center;
   }
-  .title {
+  .navbar-title {
     padding-top: 4px;
     align-self: center;
     text-align: center;

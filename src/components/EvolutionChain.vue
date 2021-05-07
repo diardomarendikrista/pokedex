@@ -29,7 +29,7 @@ p {
 .evolution-container {
   background-color: #E9D736;
   color: #000;
-  margin-right: 10px;
+  margin: 0px 6px 6px 0px;
   padding-bottom: 0px;
   border-radius: 10px;
   text-transform: capitalize;

@@ -1,12 +1,7 @@
 <template>
   <div class="container-fluid">
     <div class="container">
-      <form>
-        <div class="form-search">
-          <input class="form-control" type="text" placeholder="search" />
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-      </form>
+      <SearchBox />
       <div class="d-flex flex-wrap justify-content-center">
         <PokemonCard
           v-for="pokemon in pokemons"
@@ -25,6 +20,7 @@
 </template>
 
 <script>
+import SearchBox from '@/components/SearchBox.vue'
 import PokemonCard from '@/components/PokemonCard.vue'
 import PulseLoader from 'vue-spinner/src/PulseLoader.vue'
 import { mapState } from 'vuex'
@@ -33,7 +29,8 @@ export default {
   name: 'Home',
   components: {
     PokemonCard,
-    PulseLoader
+    PulseLoader,
+    SearchBox
   },
   data () {
     return {
@@ -51,6 +48,7 @@ export default {
   },
   created () {
     this.$store.dispatch('fetchPokemon')
+    document.title = "Pokedex";
   },
   computed: {
     ...mapState(
