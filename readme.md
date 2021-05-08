@@ -6,7 +6,6 @@ Has  2 Pages (Home and Details)
 - Search box has autocomplete feature. (if you type "char" will show "charmender", "charmeleon", "charizard", etc)
 - Detail Page display detail pokemon, and have link to their Evolution chain. (charmender has link to charmeleon and charizard, caterpie has link to metapod and butterfree, etc)
 ### Demo Link : http://diardo-pokedex.web.app/
-<br />
 
 # Screenshoot
 ### Browser
